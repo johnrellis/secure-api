@@ -15,4 +15,4 @@ const payload = {
 // Generate the token
 const token = jwt.sign(payload, secretKey, { algorithm: 'HS256' });
 
-console.log('verify JWT:', jwt.verify(token, 'this is a secret key').roles);
+console.log('verify JWT:', jwt.verify(token, 'this is a secret key').roles)
