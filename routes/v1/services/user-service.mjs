@@ -5,4 +5,9 @@ export class UserService {
   async getUserById(id) {
     return this.userStorage.getUserById(id);
   }
+
+  async getUserByName(name) {
+    return this.userStorage.getUserByName(name);
+  }
+
 }

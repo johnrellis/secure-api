@@ -10,4 +10,9 @@ export class UserStorage{
   async getUserById(id){
     return users.find(user => user.id === id);
   }
+
+  async getUserByName(name){
+    return users.find(user => user.name.toLowerCase() === name);
+  }
+
 }
