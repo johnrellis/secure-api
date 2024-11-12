@@ -6,8 +6,8 @@ const secretKey = 'this is a secret key';
 // Define the payload
 const payload = {
   sub: '1234567890',
-  name: 'John Doe',
-  roles: ['admin', 'user'],
+  name: 'Rory Gallagher',
+  roles: ['admin', 'user', 'legend'],
   iat: Math.floor(Date.now() / 1000), // Issued at (current timestamp)
   exp: Math.floor(Date.now() / 1000) + (60 * 60) // Expiration time (1 hour from now)
 };
