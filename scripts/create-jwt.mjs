@@ -15,4 +15,5 @@ const payload = {
 // Generate the token
 const token = jwt.sign(payload, secretKey, { algorithm: 'HS256' });
 
-console.log('Generated JWT:', token);
+// curl localhost:3000/api/v1/users/1 -H "Authorization: Bearer: `node scripts/create-jwt.mjs`"
+console.log(token);
