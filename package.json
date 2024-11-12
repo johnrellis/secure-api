@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.mjs",
+    "start": "nodemon app.mjs",
     "lint": "./node_modules/.bin/eslint .",
     "lint:fix": "./node_modules/.bin/eslint . --fix"
   },
@@ -21,6 +21,7 @@
     "@stylistic/eslint-plugin-js": "^2.10.1",
     "eslint": "^9.14.0",
     "globals": "^15.12.0",
+    "nodemon": "^3.1.7",
     "pre-commit": "^1.2.2"
   },
   "pre-commit": [

@@ -10,7 +10,7 @@ const router = Router();
 const userService = new UserService(new UserStorage());
 const userController = new UserController(userService);
 
-router.get('/users/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   const { status, body } = await userController.getUserById(req, res);
   return res.status(status).send(body);
 });
