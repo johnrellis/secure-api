@@ -6,8 +6,8 @@ export class UserService {
     return this.userStorage.getUserById(id);
   }
 
-  async getUserByName(name) {
-    return this.userStorage.getUserByName(name);
+  async getUserByUsername(name) {
+    return this.userStorage.getUserByUsername(name);
   }
 
 }
