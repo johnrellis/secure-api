@@ -11,7 +11,8 @@ export default [
     },
     rules:{
       "@stylistic/js/indent": ["error", 2],
-      "semi": "error"
+      "@stylistic/js/quote-props": ["error", "as-needed"],
+      semi: "error"
     }
   },
   pluginJs.configs.recommended,

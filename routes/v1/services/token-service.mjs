@@ -6,8 +6,8 @@ export class TokenService {
   }
 
   async createToken(user) {
-    console.log(`Creating token for user: ${user}`);
-    const foundUser = await this.userService.getUserByUsername(user.username);
+    console.log(`Creating token for user: ${user.username}`);
+    const foundUser = await this.userService.verifyUserWithPassword(user.username, user.password);
     // Define the payload
     const payload = {
       sub: 'secure-api',
