@@ -24,5 +24,5 @@ app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users/', verifyToken, userRouter);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Listening on port ${port}`);
 });

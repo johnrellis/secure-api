@@ -1,6 +1,7 @@
 export class TokenController {
-  constructor(tokenService) {
+  constructor(tokenService, userService) {
     this.tokenService = tokenService;
+    this.userService = userService;
   }
   async createToken(req) {
     const user = req.body;

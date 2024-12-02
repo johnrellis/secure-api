@@ -14,10 +14,8 @@ export class UserService {
 
   async verifyUserWithPassword(username, password) {
     const user = await this.userStorage.getUserByUsername(username);
-    console.log(user);
     const protectedFields = await this.userStorage.getProtectedFields(user.username);
     const isVerified = await bcrypt.compare(password, protectedFields.password);
-    console.log(isVerified);
     if(user && isVerified) {
       return user;
     }
