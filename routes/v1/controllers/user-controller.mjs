@@ -30,7 +30,7 @@ export class UserController {
   }
 
   async deleteUser(req) {
-    const id = parseInt(req.params.id);
+    const id = req.params.id;
     const deletedUser = await this.userService.deleteUser(id);
     return {
       status: deletedUser ? 200 : 404,
