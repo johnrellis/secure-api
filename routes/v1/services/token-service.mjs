@@ -1,17 +1,12 @@
 import jwt from 'jsonwebtoken';
 
 export class TokenService {
-  constructor(userService) {
-    this.userService = userService;
-  }
-
   async createToken(user) {
     console.log(`Creating token for user: ${user.username}`);
-    const foundUser = await this.userService.verifyUserWithPassword(user.username, user.password);
     // Define the payload
     const payload = {
-      sub: 'secure-api',
-      name: foundUser.getUsername(),
+      sub: user.getId(),
+      name: user.getUsername(),
       iat: Math.floor(Date.now() / 1000), // Issued at (current timestamp)
       exp: Math.floor(Date.now() / 1000) + (60 * 60) // Expiration time (1 hour from now)
     };

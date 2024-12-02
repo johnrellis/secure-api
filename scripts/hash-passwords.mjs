@@ -2,7 +2,7 @@ import bcrypt from 'bcrypt';
 
 // some users
 const users = [
-  { id: 1, username: 'john', password: 'johnpassword' },
+  { id: 1, username: 'john', password: 'firstuserpassword' },
   { id: 2, username: 'jane', password: 'janepassword' },
   { id: 3, username: 'doe', password: 'doepassword' }
 ];

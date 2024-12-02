@@ -15,4 +15,19 @@ router.get('/:id', async (req, res) => {
   return res.status(status).send(body);
 });
 
+router.post('/', async(req, res) => {
+  const { status, body } = await userController.createUser(req, res);
+  return res.status(status).send(body);
+} );
+
+router.get("/", async (req, res) => {
+  const { status, body } = await userController.listUsers(req, res);
+  return res.status(status).send(body);
+});
+
+router.delete("/:id", async (req, res) => {
+  const { status, body } = await userController.deleteUser(req, res);
+  return res.status(status).send(body);
+});
+
 export { router };

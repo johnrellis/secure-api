@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 // Define the secret key
-const secretKey = 'this is a secret key';
+const secretKey = 'this is a secret key';//TODO: BAD IDEA!
 
 // Define the payload
 const payload = {

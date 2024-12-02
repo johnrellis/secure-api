@@ -1,14 +1,21 @@
-export class TokenController {
-  constructor(tokenService) {
+export class AuthController {
+
+  constructor(userService, tokenService) {
+    this.userService = userService;
     this.tokenService = tokenService;
   }
-  async createToken(req) {
+
+  async login(req) {
     const user = req.body;
     const foundUser = await this.userService.verifyUserWithPassword(user.username, user.password);
     const token = await this.tokenService.createToken(foundUser);
     return {
-      status: 201,
+      status: 200,
       body: {
+        user: {
+          id: foundUser.id,
+          username: foundUser.username
+        },
         token
       }
     };
