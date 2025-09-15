@@ -1,4 +1,4 @@
-# secure api
+# secure api.
 
 A very secure (eventually) API.
 
